@@ -7,7 +7,7 @@ export const getProduct = createAsyncThunk(
     async (category, {rejectWithValue}) =>{
         try {
             const res = await apiClient.get(`/products/category/${category}`)
-            return res.data
+            return res.data.products
         } catch (error) {
             return rejectWithValue(error.message || "not found")
         }

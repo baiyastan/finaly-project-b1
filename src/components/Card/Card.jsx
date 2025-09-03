@@ -2,11 +2,11 @@ import React from 'react'
 import "./Card.scss"
 import cardImage from "../../assets/image/card1.png"
 
-function Card() {
+function Card({cart}) {
     return (
         <div className="card">
             <div className="board">
-                <img className="productImage" src="" alt="" />
+                <img className="productImage" src={cart.thumbnail} alt="" />
                 <div className="cardButton">
                     {/* <div><img src={icon1} alt="" /></div>
                     <div><img src={icon2} alt="" /></div> */}

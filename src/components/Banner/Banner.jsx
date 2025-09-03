@@ -13,7 +13,6 @@ function Banner() {
         dispatch(getCategory())
     }, [])
 
-    console.log(list);
     
     return (
         <div className='banner container'>

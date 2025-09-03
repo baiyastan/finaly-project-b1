@@ -2,18 +2,14 @@ import React from 'react'
 import "./List.scss"
 import Card from '../Card/Card'
 
-function ProductList() {
+function ProductList({data}) {
   return (
     <div>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {
+        data.map((item) => (
+          <Card key={item.id} cart={item} />
+        ))
+      }
     </div>
   )
 }
