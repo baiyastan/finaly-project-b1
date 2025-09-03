@@ -10,7 +10,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(getProduct(category))
-  }, [])
+  }, [category])
 
   console.log(products);
   

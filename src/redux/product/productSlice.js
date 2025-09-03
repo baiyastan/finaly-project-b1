@@ -20,9 +20,13 @@ const productSlice = createSlice({
         products: [],
         loading: false,
         error: null,
-        category: "laptops"
+        category: "beauty"
     },
-    reducers: {},
+    reducers: {
+        setCategory: (state, action) => {
+            state.category = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(getProduct.pending, (state) => {
@@ -40,4 +44,5 @@ const productSlice = createSlice({
     }  
 })
 
+export const {setCategory} = productSlice.actions
 export default productSlice.reducer

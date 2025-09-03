@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import mainImage from "../../assets/image/main.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategory } from '../../redux/category/categorySlice';
+import { setCategory } from '../../redux/product/productSlice';
 
 function Banner() {
     const {list, loading, error} = useSelector((state) => state.category)
@@ -13,6 +14,10 @@ function Banner() {
         dispatch(getCategory())
     }, [])
 
+    function filterByCategory(item) {
+        dispatch(setCategory(item))
+    }
+
     
     return (
         <div className='banner container'>
@@ -20,7 +25,7 @@ function Banner() {
                 <ul>
                    {
                     list.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li onClick={() =>filterByCategory(item)} key={index}>{item}</li>
                     ))
                    }
                 </ul>
