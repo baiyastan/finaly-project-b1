@@ -4,7 +4,7 @@ import cardImage from "../../assets/image/card1.png"
 
 function Card({cart}) {
     return (
-        <div className="card">
+        <div className="card-product">
             <div className="board">
                 <img className="productImage" src={cart.thumbnail} alt="" />
                 <div className="cardButton">

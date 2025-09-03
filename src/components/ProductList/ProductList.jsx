@@ -4,7 +4,7 @@ import Card from '../Card/Card'
 
 function ProductList({data}) {
   return (
-    <div>
+    <div className='list-card'>
       {
         data.map((item) => (
           <Card key={item.id} cart={item} />
