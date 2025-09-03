@@ -2,10 +2,19 @@
     display: flex;
     justify-content: space-between;
 
-    .sidebar{}
+    .sidebar{
+        height: 344px;
+        overflow-y: scroll;
+
+         ul {
+            list-style: none;
+        }
+    }
     .carousel{
         width: 892px;
         height: 344px;
+
+       
 
         img {
             width: 100%;

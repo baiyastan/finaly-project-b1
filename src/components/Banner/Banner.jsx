@@ -1,15 +1,29 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "./Banner.scss"
 import Carousel from 'react-bootstrap/Carousel';
 import mainImage from "../../assets/image/main.png"
+import { useDispatch, useSelector } from 'react-redux';
+import { getCategory } from '../../redux/category/categorySlice';
 
 function Banner() {
+    const {list, loading, error} = useSelector((state) => state.category)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getCategory())
+    }, [])
+
+    console.log(list);
+    
     return (
         <div className='banner container'>
             <div className='sidebar'>
                 <ul>
-                    <li>Woman’s Fashion</li>
-                    <li>Men’s Fashion</li>
+                   {
+                    list.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))
+                   }
                 </ul>
             </div>
             <div className='carousel'>
