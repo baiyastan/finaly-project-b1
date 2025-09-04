@@ -1,15 +1,20 @@
 import React from 'react'
 import "./Card.scss"
 import cardImage from "../../assets/image/card1.png"
+import like from "../../assets/svg/like.svg"
+import { addWish } from '../../redux/wish/wishSlice'
+import { useDispatch } from 'react-redux'
 
 function Card({cart}) {
+
+    const dispatch = useDispatch()
     return (
         <div className="card-product">
             <div className="board">
                 <img className="productImage" src={cart.thumbnail} alt="" />
                 <div className="cardButton">
-                    {/* <div><img src={icon1} alt="" /></div>
-                    <div><img src={icon2} alt="" /></div> */}
+                    <div><img onClick={() => dispatch(addWish(cart))} src={like} alt="" /></div>
+                    {/* <div><img src={icon2} alt="" /></div> */}
                 </div>
                 <div className="discount">
                     <p>-40%</p>
