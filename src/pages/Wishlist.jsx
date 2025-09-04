@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import WishCard from '../components/wishCard/WishCard';
 
 function Wishlist() {
   const {items} = useSelector((state) => state.favorite)
@@ -8,7 +9,11 @@ function Wishlist() {
   
   return (
     <div>
-      
+      {
+        items?.map((item) => (
+          <WishCard key={item.id} />
+        ))
+      }
     </div>
   )
 }
