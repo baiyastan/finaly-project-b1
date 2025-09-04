@@ -11,7 +11,7 @@ function Wishlist() {
     <div>
       {
         items?.map((item) => (
-          <WishCard key={item.id} />
+          <WishCard key={item.id} box={item} />
         ))
       }
     </div>

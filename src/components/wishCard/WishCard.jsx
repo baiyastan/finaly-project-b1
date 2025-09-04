@@ -1,13 +1,20 @@
 import React from 'react'
 import "./wish.scss"
+import deleteImg from "../../assets/svg/deleteImg.svg"
+import { removeWish } from '../../redux/wish/wishSlice'
+import { useDispatch } from 'react-redux'
 
-function WishCard() {
+function WishCard({box}) {
+    const dispatch = useDispatch()
+
     return (
         <div className="card wish">
             <div className='board'>
-                <img className='bagImg' src="" alt="" />
+                <img className='bagImg' src={box?.thumbnail} alt="" />
                 <div className="cardButton">
-                    <div><img src="" alt="" /></div>
+                    <div><img 
+                        onClick={() => dispatch(removeWish(box.id))} 
+                        src={deleteImg} alt="" /></div>
                 </div>
                 <div className='discount'>
                     <p>-35%</p>

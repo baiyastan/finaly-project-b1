@@ -2,8 +2,10 @@ import React from 'react'
 import "./Header.scss"
 import like from "../../assets/svg/like.svg"
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function Header() {
+  const {items} = useSelector((state) => state.favorite)
   return (
     <header className='header'>
       <div className='top-header'>
@@ -19,6 +21,7 @@ function Header() {
       <nav className='navbar'>
         <Link to="/wishlist">
           <img src={like} alt="" />
+          <p>{items.length}</p>
         </Link>
       </nav>
     </header>
