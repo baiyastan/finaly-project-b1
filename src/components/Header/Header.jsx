@@ -3,9 +3,12 @@ import "./Header.scss"
 import like from "../../assets/svg/like.svg"
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 function Header() {
   const {items} = useSelector((state) => state.favorite)
+  const {t} = useTranslation()
+  
   return (
     <header className='header'>
       <div className='top-header'>
