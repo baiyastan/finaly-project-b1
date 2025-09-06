@@ -1,11 +1,25 @@
 import React, {useState} from 'react'
 import "./Register.scss"
 import { Link } from 'react-router-dom'
+import { auth } from '../firebase'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 function Register() {
   const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  
+  const [password, setPassword] = useState("")  
+
+  async function createUser() {
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password)
+
+      console.log(res);
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
   return (
     <div>
      <div className='signUp-page'>
@@ -22,12 +36,20 @@ function Register() {
 
         <div className='inputs'>
           <input type="text" placeholder='Name'/>
-          <input type="text" placeholder='Email or Phone Number'/>
-          <input type="text" placeholder='Password'/>
+          <input 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)}
+            type="email" 
+            placeholder='Email or Phone Number'/>
+          <input 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)}
+            type="password" 
+            placeholder='Password'/>
         </div>
 
         <div className='btns'>
-          <button>Create Account</button>
+          <button onClick={createUser}>Create Account</button>
           <button className='googleAcc'>
             <img src="" alt="" />
             <p>Sign up with Google</p>
