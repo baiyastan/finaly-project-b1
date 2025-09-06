@@ -3,9 +3,13 @@ import "./Card.scss"
 import cardImage from "../../assets/image/card1.png"
 import like from "../../assets/svg/like.svg"
 import { addWish } from '../../redux/wish/wishSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { FaRegHeart } from "react-icons/fa";
 
-function Card({cart}) {
+function Card({ cart }) {
+    const { items } = useSelector((state) => state.favorite)
+
+    const isLiked = items.some((x) => x.id == cart.id)
 
     const dispatch = useDispatch()
     return (
@@ -13,8 +17,14 @@ function Card({cart}) {
             <div className="board">
                 <img className="productImage" src={cart.thumbnail} alt="" />
                 <div className="cardButton">
-                    <div><img onClick={() => dispatch(addWish(cart))} src={like} alt="" /></div>
+                    <div>
+                        {
+                            isLiked ? (<FaRegHeart className='red' />) : (<img onClick={() => dispatch(addWish(cart))} src={like} alt="" />)
+                        }
+
+                    </div>
                     {/* <div><img src={icon2} alt="" /></div> */}
+
                 </div>
                 <div className="discount">
                     <p>-40%</p>

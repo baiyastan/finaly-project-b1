@@ -1,9 +1,45 @@
-import React from 'react'
+import React, {useState} from 'react'
+import "./Register.scss"
+import { Link } from 'react-router-dom'
 
 function Register() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  
   return (
     <div>
-      Register
+     <div className='signUp-page'>
+      <div className='signUp-left'>
+        <img src= "" alt="" />
+      </div>
+
+      <div className='signUp-right'>
+        <div className='title'>
+          <h1>Create an account</h1>
+        <p>Enter your details below</p>
+        </div>
+        
+
+        <div className='inputs'>
+          <input type="text" placeholder='Name'/>
+          <input type="text" placeholder='Email or Phone Number'/>
+          <input type="text" placeholder='Password'/>
+        </div>
+
+        <div className='btns'>
+          <button>Create Account</button>
+          <button className='googleAcc'>
+            <img src="" alt="" />
+            <p>Sign up with Google</p>
+          </button>
+        </div>
+
+        <div className='links'>
+          <p>Already have account?</p>
+          <Link to="/login"><p className='login'>Log in</p></Link>
+        </div>
+      </div>
+    </div> Register
     </div>
   )
 }

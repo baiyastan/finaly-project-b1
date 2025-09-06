@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.signUp-page{
+    width: 1305px;
+    height: 781px;
+    margin: 10px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .signUp-left{
+        width: 805px;
+
+        img{
+            width: 805px;
+            height: 781px;
+            object-fit: contain;
+        }
+    }
+
+    .signUp-right{
+        width: 371px;
+        height: 530px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        title{
+            width: 339px;
+            height: 78px;
+
+        }
+        h1{
+            font-family: Inter;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        p{
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .inputs{
+            width: 370px;
+            height: 176px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            input{
+                width: 370px;
+                height: 35px;
+                border: none;
+                border-bottom: 2px solid black;
+                opacity: 40%;
+
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+        .btns{
+            width: 371px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            button{
+                width: 371px;
+                height: 56px;
+                background-color: rgba(219, 68, 68, 1);
+                border-radius: 4px;
+                cursor: pointer;
+
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 500;
+                color: white;
+                
+            }
+
+            .googleAcc{
+                background-color: white;
+                border: 2px solid rgb(161, 161, 161);
+                color: black;
+                cursor: pointer;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                img{
+                    width: 24px;
+                    height: 24px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .links{
+            width: 248px;
+            margin-left: 50px;
+            
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            p{
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 400;
+                opacity: 70%;
+            }
+
+            .login{
+                font-weight: 500;
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+}
