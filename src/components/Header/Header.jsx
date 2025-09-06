@@ -7,8 +7,8 @@ import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
 function Header() {
-  const {items} = useSelector((state) => state.favorite)
-  const {t, i18n} = useTranslation()
+  const { items } = useSelector((state) => state.favorite)
+  const { t, i18n } = useTranslation()
 
   function change(e) {
     let lng = e.target.value;
@@ -27,16 +27,28 @@ function Header() {
         </div>
       </div>
       <nav className='navbar'>
-        <Link to="/">{t("home")}</Link>
-        <Link to="/">{t("about")}</Link>
-        <Link to="/wishlist">
-          <div><img src={like} alt="" />
-          <p>{items.length}</p></div>
-        </Link>
-        <Link to="/wishlist">
-          <div><img src={Carzina} alt="" />
-          <p>{items.length}</p></div>
-        </Link>
+        <div className='nav-left'>
+          <h1>Exlusive</h1>
+          <ul>
+            <li> <Link to="/">{t("home")}</Link></li>
+            <li>Contact</li>
+            <li><Link to="/">{t("about")}</Link></li>
+            <li><Link to="/singUp">{t("singUp")}</Link></li>
+          </ul>
+        </div>
+        <div className='nav-right'>
+          <div>
+            <input type="text" placeholder='What are you looking for?' />
+          </div>
+          <Link to="/wishlist" className='.Oks'>
+            <div><img src={like} alt="" />
+              <p>{items.length}</p></div>
+          </Link>
+          <Link to="/wishlist">
+            <div className='.Oks'><img src={Carzina} alt="" />
+              <p>{items.length}</p></div>
+          </Link>
+        </div>
       </nav>
     </header>
   )

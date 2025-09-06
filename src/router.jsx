@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
 import Wishlist from "./pages/Wishlist";
+import SingUp from "./pages/SingUp/SingUp";
 
 const myRouter = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const myRouter = createBrowserRouter([
             {
                 path: "wishlist",
                 element: <Wishlist/>
+            },
+            {
+                path: "singUp",
+                element: <SingUp/>
             },
         ]
     }

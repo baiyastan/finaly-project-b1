@@ -1,46 +1,161 @@
 .header {
     width: 100%;
 
+
     .top-header {
         width: 100%;
         background-color: #000;
         height: 48px;
+        display: flex;
+
+        .Header_1 {
+            display: flex;
+            justify-content: space-between;
+            width: 550px;
+        }
 
         .header-select {
-            width: 1170px;
-            margin: 0 auto;
+            width: 849px;
+            margin: 0 0 0 420px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
 
-            p {}
+            p {
+                color: var(--Text, rgba(250, 250, 250, 1));
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            a {
+                color: var(--Text, rgba(250, 250, 250, 1));
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0%;
+                text-align: center;
+                text-decoration-line: underline;
+            }
+
+            select {
+                color: rgba(250, 250, 250, 1);
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: left;
+                background-color: #000;
+                border: 1px solid black;
+                outline: 1px solid black;
+                padding-right: 10px;
+            }
         }
     }
 
-    .navbar{
-        div{
-            width: 30px;
-            height: 30px;
-            position: relative;
+    .navbar {
+        width: 1110px;
+        height: 38px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: undefined;
+        margin: 30px auto 10px;
 
-            img{
-                width: 100%;
-                height: 100%;
+        .nav-left {
+            width: 675px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: undefined;
+
+            h1 {
+                color: #000;
+                font-size: 20px;
+                font-family: Poppins;
             }
 
-            p{
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                background-color: #DB4444;
-                border-radius: 50%;
+            ul {
+                width: 367px;
+                height: 24px;
                 display: flex;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                list-style: none;
+                font-family: Poppins;
+            }
+        }
+
+        .nav-right {
+            width: 335px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: undefined;
+
+            div {
+                width: 243px;
+                height: 38px;
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
-                color: white;
-                font-size: 12px;
-                font-weight: 600;
+                gap: undefined;
+                padding: 7px 12px 7px 20px;
+
+                border-radius: 4px;
+                background: var(--Secondary, rgba(245, 245, 245, 1));
+
+                input {
+                    color: var(--Text2, rgba(0, 0, 0, 1));
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    border: none;
+                    background: var(--Secondary, rgba(245, 245, 245, 1));
+                    outline: none;
+                }
+            }
+
+            .Oks {
+                div {
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    p {
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-color: #DB4444;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }

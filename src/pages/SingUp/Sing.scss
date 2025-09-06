@@ -1,0 +1,203 @@
+section {
+    width: 1305px;
+    height: 781px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: undefined;
+    margin: 90px 0 150px 0;
+
+    .Side_Image {
+        display: flex;
+        align-items: end;
+        width: 805px;
+        height: 781px;
+        border-radius: 0px 4px 4px 0px;
+        background: rgba(203, 228, 232, 1);
+
+        img {
+            width: 919px;
+            height: 706px;
+        }
+    }
+
+    .right_Bart {
+        width: 500px;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        .SingUp {
+            width: 371px;
+            height: 530px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: undefined;
+
+            .Sing_UP {
+                width: 339px;
+                height: 78px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: undefined;
+
+                h3 {
+                    color: var(--Text2, rgba(0, 0, 0, 1));
+                    font-family: Inter;
+                    font-size: 36px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    letter-spacing: 4%;
+                    text-align: left;
+                }
+
+                p {
+                    color: var(--Text2, rgba(0, 0, 0, 1));
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+
+            .Sing_center {
+                width: 370px;
+                height: 176px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: undefined;
+
+                div {
+                    width: 370px;
+                    height: 32px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: undefined;
+
+                    input {
+                        color: var(--Text2, rgba(0, 0, 0, 1));
+                        width: 100%;
+                        height: 35px;
+
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        border-left: none;
+                        border-top: none;
+                        border-right: none;
+                        outline: none;
+                    }
+                }
+            }
+
+            .Sing_end {
+                width: 371px;
+                height: 188px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: undefined;
+
+                .Btn1 {
+                    width: 371px;
+                    height: 56px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: undefined;
+                    border-radius: 4px;
+                    background: var(--Button2, rgba(219, 68, 68, 1));
+                    outline: none;
+                    border: none;
+                    padding-top: 15px;
+
+                    p {
+                        color: var(--Text, rgba(250, 250, 250, 1));
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+                }
+
+                .Btn2 {
+                    width: 371px;
+                    height: 56px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: undefined;
+                    padding: 16px 86px 16px 86px;
+                    box-sizing: border-box;
+                    border: 1px solid rgba(0, 0, 0, 0.4);
+                    border-radius: 4px;
+
+                    div {
+                        width: 185px;
+                        height: 24px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap: undefined;
+                    }
+                }
+
+                .Sing_End_Text {
+                    width: 248px;
+                    height: 28px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: undefined;
+
+                    p {
+                        display: flex;
+                        color: var(--Text2, rgba(0, 0, 0, 1));
+
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        opacity: 0.7;
+                    }
+
+                    h4 {
+                        color: var(--Text2, rgba(0, 0, 0, 1));
+
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+}
